@@ -22,50 +22,49 @@ Libraries Used
 --------------
 
 
-*[Foundation][0]-核心系统功能的组件，Kotlin扩展和对
+* [Foundation][0]-核心系统功能的组件，Kotlin扩展和对
 
 多重索引和自动化测试。
 
-*[AppCompat][1]-在旧版本的Android上优雅地降级。
+    * [AppCompat][1] - 在旧版本的Android上优雅地降级。
 
-*[Android KTX][2]-编写更简洁、惯用的Kotlin代码。
+    * [Android KTX][2] - 编写更简洁、惯用的Kotlin代码。
 
-*[Test][4]-一个用于单元和运行时UI测试的Android测试框架。
+    * [Test][4] - 一个用于单元和运行时UI测试的Android测试框架。
 
-*[Architecture][10]—一个库集合，帮助您设计健壮、可测试和
+* [Architecture][10] — 一个库集合，帮助您设计健壮、可测试和
 
 可维护的应用程序。从管理UI组件生命周期和处理数据的类开始
 
 坚持不懈。
 
-*[Data Binding][11]-声明性地将可观察数据绑定到UI元素。
+    * [Data Binding][11] - 声明性地将可观察数据绑定到UI元素。
 
-*[Lifecycles][12]-创建一个自动响应生命周期事件的UI。
+    * [Lifecycles][12] - 创建一个自动响应生命周期事件的UI。
 
-*[LiveData][13]-生成数据对象，当基础数据库发生更改时通知视图。
+    * [LiveData][13] - 生成数据对象，当基础数据库发生更改时通知视图。
 
-*[导航][14]-处理应用内导航所需的一切。
+    * [Navigation][14] - 处理应用内导航所需的一切。
 
-*[Room][16]-使用应用内对象和编译时检查访问应用程序的SQLite数据库。
+    * [Room][16] - 使用应用内对象和编译时检查访问应用程序的SQLite数据库。
 
-*[ViewModel][17]-存储应用程序循环时未销毁的UI相关数据。轻松安排
-优化执行的异步任务。
+    * [ViewModel][17]-存储应用程序循环时未销毁的UI相关数据。轻松安排优化执行的异步任务。
 
-*[WorkManager][18]-管理Android后台作业。
+    * [WorkManager][18]-管理Android后台作业。
 
-*[UI][30]-有关为什么以及如何在应用程序中使用UI组件的详细信息-一起使用还是单独使用
+* [UI][30]-有关为什么以及如何在应用程序中使用UI组件的详细信息-一起使用还是单独使用
 
-*[Animations&Transitions][31]-在屏幕之间移动控件和转换。
+    * [Animations&Transitions][31] - 在屏幕之间移动控件和转换。
 
-*[Fragment][34]—可组合UI的基本单元。
+    * [Fragment][34] — 可组合UI的基本单元。
 
-*[Layout][35]-使用不同的算法布局小部件。
+    * [Layout][35] - 使用不同的算法布局小部件。
 
-*第三方
+* 第三方
 
-*[Glide][90]用于图像加载
+    * [Glide][90] 用于图像加载
 
-*[material-dialogs][91]用于文件加载 
+    * [material-dialogs][91] 用于文件加载 
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
 [2]: https://developer.android.com/kotlin/ktx
