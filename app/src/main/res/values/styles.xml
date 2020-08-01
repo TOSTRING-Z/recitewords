@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BaseLightTheme" parent="AppTheme">
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:textColorHint">@color/textHintColor</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:toolbarStyle">@style/DarkToolBarTheme</item>
+    </style>
+
+    <style name="WhiteTheme" parent="BaseLightTheme">
+        <item name="android:toolbarStyle">@style/LightTollBarTheme</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/mdtp_white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:colorControlNormal">@android:color/black</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:editTextColor">@android:color/black</item>
+
+    </style>
+
+    <style name="DarkToolBarTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlNormal">@color/mdtp_white</item>
+    </style>
+    <style name="LightTollBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorControlNormal">@android:color/black</item>
+    </style>
+</resources>

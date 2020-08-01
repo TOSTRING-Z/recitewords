@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="Words"
+                type="com.example.easy.data.table.Words"/>
+
+        <variable
+                name="OnClick"
+                type="android.view.View.OnClickListener"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                android:text="认识"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/know"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#2196F3" android:textColor="#FFFFFF" app:layout_constraintEnd_toStartOf="@+id/dim"/>
+        <Button
+                android:text="不认识"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/dknow" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#F40606" android:textColor="#FFFFFF" app:layout_constraintStart_toEndOf="@+id/dim"/>
+        <Button
+                android:text="模糊"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/dim"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#F1B608" android:textColor="#FFFFFF"/>
+        <androidx.cardview.widget.CardView
+                android:layout_width="211dp"
+                android:layout_height="303dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/cardView">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="304dp">
+
+                <TextView
+                        android:text="@{Words.rank}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/rank"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:textColor="#FF5722"/>
+                <TextView
+                        android:text="@{Words.explain}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/explane"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rank" android:textColor="#FFFFFF"/>
+                <TextView
+                        android:text="@{Words.word}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/word"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/rank" android:textSize="20sp"
+                        android:textStyle="bold|italic"
+                        android:textAllCaps="false"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
