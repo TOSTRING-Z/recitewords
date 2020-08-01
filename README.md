@@ -22,9 +22,7 @@ Libraries Used
 --------------
 
 
-* [Foundation][0]-核心系统功能的组件，Kotlin扩展和对
-
-多重索引和自动化测试。
+* [Foundation][0]-核心系统功能的组件，Kotlin扩展和对多重索引和自动化测试。
 
     * [AppCompat][1] - 在旧版本的Android上优雅地降级。
 
@@ -32,11 +30,7 @@ Libraries Used
 
     * [Test][4] - 一个用于单元和运行时UI测试的Android测试框架。
 
-* [Architecture][10] — 一个库集合，帮助您设计健壮、可测试和
-
-可维护的应用程序。从管理UI组件生命周期和处理数据的类开始
-
-坚持不懈。
+* [Architecture][10] — 一个库集合，帮助您设计健壮、可测试和 可维护的应用程序。从管理UI组件生命周期和处理数据的类开始坚持不懈。
 
     * [Data Binding][11] - 声明性地将可观察数据绑定到UI元素。
 
@@ -52,7 +46,7 @@ Libraries Used
 
     * [WorkManager][18]-管理Android后台作业。
 
-* [UI][30]-有关为什么以及如何在应用程序中使用UI组件的详细信息-一起使用还是单独使用
+* [UI][30] - 有关为什么以及如何在应用程序中使用UI组件的详细信息-一起使用还是单独使用
 
     * [Animations&Transitions][31] - 在屏幕之间移动控件和转换。
 
@@ -65,6 +59,7 @@ Libraries Used
     * [Glide][90] 用于图像加载
 
     * [material-dialogs][91] 用于文件加载 
+
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
 [2]: https://developer.android.com/kotlin/ktx
