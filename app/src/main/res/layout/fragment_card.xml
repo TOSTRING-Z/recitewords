@@ -10,6 +10,7 @@
         <variable name="dkonwOnclick" type="android.view.View.OnClickListener"/>
         <variable name="dimOnclick" type="android.view.View.OnClickListener"/>
         <variable name="audioOnclick" type="android.view.View.OnClickListener"/>
+        <variable name="detailOnclick" type="android.view.View.OnClickListener"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/content"
@@ -68,6 +69,7 @@
                         app:layout_constraintBottom_toTopOf="@+id/rank"/>
                 <TextView
                         android:text="@{Words.word}"
+                        android:onClick="@{detailOnclick}"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/word"
                         app:layout_constraintEnd_toEndOf="parent"

@@ -2,16 +2,19 @@ package com.example.recitewords.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recitewords.data.table.Words
 import com.example.recitewords.databinding.FragmentCardBinding
 import com.example.recitewords.viewmodel.ScreenSlidePageViewModel
+import com.example.recitewords.views.activity.DetailActivity
 import com.example.recitewords.views.activity.ScreenSlidePagerActivity
 import java.io.IOException
 
@@ -31,10 +34,6 @@ class CardPagerAdapter(
     override fun onBindViewHolder(holder: CardPagerViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
-    override fun onViewRecycled(holder: CardPagerViewHolder) {
-        super.onViewRecycled(holder)
-    }
 }
 
 class CardPagerViewHolder(
@@ -42,14 +41,15 @@ class CardPagerViewHolder(
     val context: Context
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    init {
-        binding.word.setOnClickListener { binding.explain.visibility = View.VISIBLE }
-    }
-
     fun bind(words: Words?) {
         words?.let { w ->
 
             binding.words = w
+            binding.setDetailOnclick {
+                val intent = Intent(context, DetailActivity::class.java)
+                intent.putExtra("word", w.word)
+                context.startActivity(intent)
+            }
             binding.setKonwOnclick {
                 if (binding.explain.visibility == View.GONE) {
                     binding.explain.visibility = View.VISIBLE

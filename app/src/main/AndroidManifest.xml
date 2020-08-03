@@ -2,21 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.recitewords">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:name=".AppEasy"
             android:allowBackup="true"
+            android:fullBackupContent="@xml/backup_descriptor"
             android:icon="@mipmap/app_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/app_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/WhiteTheme"
-            android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".views.activity.ScreenSlidePagerActivity"
-                  android:screenOrientation="portrait"
-                  tools:ignore="LockedOrientationActivity">
+            android:theme="@style/WhiteTheme">
+        <activity android:name=".views.activity.DetailActivity">
+        </activity>
+        <activity
+                android:name=".views.activity.ScreenSlidePagerActivity"
+                android:screenOrientation="portrait"
+                tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
                 android:name=".views.activity.MainActivity"
