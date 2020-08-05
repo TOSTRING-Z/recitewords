@@ -55,10 +55,10 @@ class ScreenSlidePageViewModel(private val repository: WordsRepository) : ViewMo
             }
             asyncTryAsync {
                 val words = mutableListOf<Words>()
-                val items = File(path).readText().split("\t\"", "\"\n", "\t")
+                val items = Regex(""""(.*?)"\t"([\d]+)"\t"(.*?)"[\s]+""",RegexOption.DOT_MATCHES_ALL).findAll(File(path).readText())
                 try {
-                    for (i in 2..items.size step 3) {
-                        words.add(Words(items.get(i - 2), items.get(i - 1).toInt(), items.get(i).trim(), 0))
+                    items.groupBy {
+                        words.add(Words(it.groups.get(1)!!.value, it.groups.get(2)!!.value.toInt(), it.groups.get(3)!!.value, 0))
                     }
                 } finally {
                     repository.insert(words.toList())
